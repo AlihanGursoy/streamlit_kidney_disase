@@ -7,9 +7,9 @@ import streamlit as st
 from joblib import load
 
 # ================== SABİTLER ==================
-MODEL_PATH = "/workspaces/streamlit_kidney_disase/str_site/final_pipeline_RandomForest.joblib"  # sabit model yolu
+MODEL_PATH = "./final_pipeline_RandomForest.joblib"  # sabit model yolu
 EXCEL_LOG_PATH = "./tahminler.xlsx"                                   # otomatik yazılacak Excel
-COVER_IMAGE_CANDIDATES = ["/workspaces/streamlit_kidney_disase/str_site/tas.jpg"]
+COVER_IMAGE_CANDIDATES = ["./tas.jpg"]
 
 # ========== Eğitimde kullanılan FunctionTransformer ==========
 def to_str_array(X):
