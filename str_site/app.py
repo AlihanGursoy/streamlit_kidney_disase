@@ -7,9 +7,12 @@ import streamlit as st
 from joblib import load
 
 # ================== SABİTLER ==================
-MODEL_PATH = "./final_pipeline_RandomForest.joblib"  # sabit model yolu
-EXCEL_LOG_PATH = "./tahminler.xlsx"                                   # otomatik yazılacak Excel
-COVER_IMAGE_CANDIDATES = ["./tas.jpg"]
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # app.py'nin bulunduğu dizin
+MODEL_PATH = os.path.join(BASE_DIR, "final_pipeline_RandomForest.joblib")
+EXCEL_LOG_PATH = os.path.join(BASE_DIR, "tahminler.xlsx")
+COVER_IMAGE_CANDIDATES = [os.path.join(BASE_DIR, "tas.jpg")]
 
 # ========== Eğitimde kullanılan FunctionTransformer ==========
 def to_str_array(X):
